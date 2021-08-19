@@ -1,0 +1,363 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/** ******** Removing Default Styles ******** **/
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.row {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+.col {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+ul {
+  margin-bottom: 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/** ******** Global Classes ******** **/
+// .p-none {
+//   pointer-events: none !important	;
+// }
+
+/** ******** Global Styles ******** **/
+form {
+  .form-row {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    .form-group {
+      // padding: .5rem;
+      width: 100%;
+      // &:first-child {
+      //   padding: 1rem 0 0 0;
+      // }
+      .form-label {
+        font-family: var(--ft-sec);
+        color: var(--clr-text);
+        font-size: 1rem;
+        .required {
+          color: var(--clr-req-red);
+          font-weight: bold;
+          margin: 0 0 0 0.5rem;
+        }
+      }
+      .form-control {
+        font-family: var(--ft-ter);
+        font-size: 1rem;
+        color: var(--clr-text);
+        border: 0.05rem solid var(--clr-text);
+        border-radius: 0.3rem;
+        resize: none;
+        &::placeholder {
+          font-family: var(--ft-ter);
+          color: var(--clr-text);
+          opacity: 0.6;
+        }
+        &:focus {
+          outline: none;
+          box-shadow: none;
+        }
+        &.danger {
+          background-color: var(--clr-danger-bg);
+        }
+      }
+      .form-file {
+        padding: 0.375rem 0.75rem;
+      }
+      .input-group {
+        .input-group-text {
+          border: 0.05rem solid var(--clr-text);
+          border-left: hidden;
+          border-radius: 0 0.25rem 0.25rem 0;
+          &.no-action {
+            cursor: default;
+          }
+          &.action {
+            cursor: pointer;
+          }
+        }
+      }
+      .form-ddn {
+        .dropdown-toggle {
+          padding: 0.375rem 0.75rem;
+          // max-width: 15rem;
+          display: flex;
+          width: 100%;
+          background: transparent;
+          color: var(--clr-text);
+          border: 0.05rem solid var(--clr-text);
+          border-radius: 0.3rem;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          &.placeholder {
+            opacity: 0.6;
+          }
+          &::after {
+            margin-left: 1.255em;
+          }
+        }
+        .dropdown-menu {
+          &.show {
+            width: 100%;
+            padding: 0;
+            a {
+              padding: 0.25rem 0.5rem;
+              font-size: 1rem;
+              text-align: center;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              border: 0.025rem solid var(--clr-text);
+              border-bottom: none;
+              &:last-child {
+                border-bottom: 0.025rem solid var(--clr-text);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/** ******** React Bootstrap Table ******** **/
+.react-bootstrap-table {
+  table {
+    thead {
+      background-color: var(--clr-pri);
+      color: var(--clr-white);
+      tr {
+        th {
+          font-size: 1rem;
+          font-family: var(--ft-sec);
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          font-size: .9rem;
+          font-family: var(--ft-text);
+        }
+      }
+    }
+  }
+}
+
+/** ******** Button Styles ******** **/
+.btn {
+  cursor: pointer;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin: auto;
+  text-align: center;
+  font-family: var(--ft-sec);
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+//   transition: all 0.3s ease;
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+// .btn-pri {
+//   background: var(--clr-pri);
+//   color: var(--clr-bg-5);
+//   &:hover,
+//   &:focus {
+//     background: var(--clr-pri);
+//     color: var(--clr-bg-5);
+//   }
+// }
+// .btn-sec {
+//   background: var(--clr-sec);
+//   color: var(--clr-bg-5);
+//   &:hover,
+//   &:focus {
+//     background: var(--clr-sec);
+//     color: var(--clr-bg-5);
+//   }
+// }
+.btn-warning {
+//   background: var(--clr-warning-bg);
+//   color: var(--clr-warning-txt);
+//   &:hover,
+//   &:focus {
+//     background: var(--clr-warning-bg);
+//     color: var(--clr-warning-txt);
+//   }
+&.diasble{
+  background: var(--clr-warning-bg);
+  color: var(--clr-warning-txt);
+  pointer-events: none;
+}
+}
+.btn-success {
+//   background: var(--clr-success-bg);
+//   color: var(--clr-success-txt);
+//   &:hover,
+//   &:focus {
+//     background: var(--clr-success-bg);
+//     color: var(--clr-success-txt);
+//   }
+&.diasble{
+      background: var(--clr-success-bg);
+  color: var(--clr-success-txt);
+    pointer-events: none;
+}
+}
+
+/** ******** React Toastify Styles ******** **/
+.Toastify {
+  .Toastify__toast-container {
+    &.Toastify__toast-container--bottom-right {
+      .Toastify__toast {
+        &.Toastify__toast--error {
+          background: var(--clr-danger-bg);
+          color: var(--clr-danger-txt);
+          border: 0.05rem solid var(--clr-danger-bdr);
+        }
+        &.Toastify__toast--success {
+          background: var(--clr-success-bg);
+          color: var(--clr-success-txt);
+          border: 0.05rem solid var(--clr-success-bdr);
+        }
+        &.Toastify__toast--warning {
+          background: var(--clr-warning-bg);
+          color: var(--clr-warning-txt);
+          border: 0.05rem solid var(--clr-warning-bdr);
+        }
+        &.Toastify__toast--info {
+          background: var(--clr-info-bg);
+          color: var(--clr-info-txt);
+          border: 0.05rem solid var(--clr-info-bdr);
+        }
+        .Toastify__toast-body {
+          font-family: var(--ft-sec);
+          font-size: 1.2rem;
+        }
+        .Toastify__close-button {
+          svg {
+            fill: var(--clr-text);
+          }
+        }
+        .Toastify__progress-bar {
+          background: var(--clr-text);
+        }
+      }
+    }
+  }
+}
+
+/** ******** React Calender Style ******** **/
+// .react-calendar {
+//   position: absolute;
+//   z-index: 99;
+//   .react-calendar__navigation {
+//     margin: 0;
+
+//     button {
+//       font-family: var(--ft-sec);
+//       font-size: 0.9rem;
+//       padding: 0.5rem 0;
+//       height: max-content;
+//       &:focus {
+//         background-color: transparent;
+//       }
+//     }
+
+//     // .react-calendar__navigation__arrow {
+//     // }
+//     .react-calendar__navigation__label {
+//       font-family: var(--ft-sec);
+//       font-size: 0.9rem;
+//     }
+//   }
+//   .react-calendar__viewContainer {
+//     // .react-calendar__year-view {
+//     //   .react-calendar__year-view__months {
+
+//     //       font-family: var(--ft-ter);
+//     //       font-size: 0.8rem;
+//     //       color: var(--clr-ter);
+
+//     //   }
+//     // }
+//     // .react-calendar__decade-view{
+//     //   .react-calendar__decade-view__years{
+//     //     font-family: var(--ft-ter);
+//     //       font-size: 0.8rem;
+//     //       color: var(--clr-ter);
+//     //   }
+//     // }
+//     .react-calendar__month-view,
+//     .react-calendar__year-view,
+//     .react-calendar__decade-view,
+//     .react-calendar__century-view {
+//       font-family: var(--ft-ter);
+//       font-size: 0.8rem;
+//       color: var(--clr-ter);
+//     }
+//     .react-calendar__month-view {
+//       // .react-calendar__month-view__weekdays {
+//       //   font-family: var(--ft-pri);
+//       //   font-size: 0.8rem;
+//       //   color: var(--clr-sec);
+//       // }
+//       .react-calendar__month-view__days {
+//         font-family: var(--ft-ter);
+//         font-size: 0.7rem;
+//         color: var(--clr-ter);
+//       }
+//     }
+//   }
+// }

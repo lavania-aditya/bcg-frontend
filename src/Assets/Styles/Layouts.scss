@@ -1,0 +1,41 @@
+/** ******** Header ******** **/
+.header {
+  padding: 0 4rem;
+  background-color: var(--clr-bg-5);
+  .navbar-brand {
+    a {
+      font-size: 3rem;
+      font-family: var(--ft-head);
+      letter-spacing: 0.5rem;
+      color: var(--clr-pri);
+    }
+  }
+  .navbar-collapse {
+    justify-content: flex-end;
+    .navbar-nav {
+      a {
+        &.nav-link {
+          font-size: 1.4rem;
+          font-family: var(--ft-text);
+          color: var(--clr-pri);
+          margin: 0 2rem;
+          border-bottom: 0.2rem solid transparent;
+          padding: 0.5rem 1rem;
+          &:hover {
+            color: var(--clr-sec);
+            border-bottom: 0.2rem solid var(--clr-sec);
+          }
+        }
+
+        &.active {
+          background-color: var(--clr-info-bg);
+          border-radius: 0.5rem;
+          &:hover {
+            color: var(--clr-pri);
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+}

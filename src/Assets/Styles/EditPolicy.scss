@@ -1,0 +1,13 @@
+.edit-policy{
+    margin: 2rem;
+    .edit-header-row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .user-policy-details{
+            font-size: 1.4rem;
+            font-family: var(--ft-pri);
+            font-weight: 600;
+        }
+    }
+}
