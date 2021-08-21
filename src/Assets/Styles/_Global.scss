@@ -173,6 +173,36 @@ form {
     }
   }
 }
+.react-bootstrap-table-pagination {
+  .react-bs-table-sizePerPage-dropdown {
+    display: none;
+    visibility: hidden !important;
+  }
+  .react-bootstrap-table-pagination-list {
+    .react-bootstrap-table-page-btns-ul {
+      justify-content: flex-end;
+      li {
+        a {
+          padding: 1rem;
+          font-size: 1rem;
+          border-color: var(--clr-pri);
+          font-family: var(--ft-text);
+          color: var(--clr-pri);
+          &:focus {
+            box-shadow: none;
+            border-color: var(--clr-pri);
+          }
+        }
+        &.active {
+          a {
+            background-color: var(--clr-pri);
+            color: var(--clr-white);
+          }
+        }
+      }
+    }
+  }
+}
 
 /** ******** Dropdown Styles ******** **/
 .dropdown {

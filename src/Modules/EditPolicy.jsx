@@ -99,6 +99,13 @@ export const EditPolicy = (props) => {
     setFormData(newFormData);
   };
 
+  const handleDiscard = (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+
+    setFormData(parentRow);
+  };
+
   const handleSave = (e) => {
     e.stopPropagation();
     e.preventDefault();
@@ -244,7 +251,12 @@ export const EditPolicy = (props) => {
               Save Changes
             </button>
 
-            <button className="btn btn-warning">Discard Changes</button>
+            <button
+              className="btn btn-warning"
+              onClick={(e) => handleDiscard(e)}
+            >
+              Discard Changes
+            </button>
           </div>
         </div>
 

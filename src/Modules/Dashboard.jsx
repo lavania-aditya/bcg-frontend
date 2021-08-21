@@ -5,15 +5,16 @@ import { Bar } from "react-chartjs-2";
 import { BsCheck } from "react-icons/bs";
 import moment from "moment";
 
-const regionSelectList = ["East", "West", "North", "South"];
+const regionSelectList = ["All Region", "East", "West", "North", "South"];
 export const Dashboard = () => {
-  const [selectedRegion, setSelectedRegion] = useState("");
+  const [selectedRegion, setSelectedRegion] = useState("All Region");
   const [chartData, setChartData] = useState({});
 
   const allPolicies = useSelector((state) => state);
 
   useEffect(() => {
     prepareChartData(allPolicies);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const prepareChartData = (policiesData) => {
@@ -134,6 +135,15 @@ export const Dashboard = () => {
 
   const selectRegionChange = (item) => {
     setSelectedRegion(item);
+
+    let newPoliciesData = allPolicies;
+
+    if (item !== "All Region") {
+      newPoliciesData = allPolicies.filter(
+        (data) => data.customer_region === item
+      );
+    }
+    prepareChartData(newPoliciesData);
   };
 
   return (
@@ -167,7 +177,7 @@ export const Dashboard = () => {
         </Dropdown>
       </div>
       <div className="chart-display">
-        <Bar data={chartData} />
+        <Bar data={chartData}  />
       </div>
     </div>
   );
