@@ -58,7 +58,6 @@ export const App = () => {
         <ScrollToTop />
         <Header />
         <Switch>
-          {/* <Route exact path="/" component={AllPolicies} /> */}
           <Route exact path="/" component={Dashboard} />
           <Route exact path="/all-policies" component={AllPolicies} />
           <Route exact path="/policy/:id" component={EditPolicy} />

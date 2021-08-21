@@ -1,4 +1,3 @@
-// import { IDeleteCmsUser } from "../Interface/ICmsUser";
 import axios from "axios";
 import hostname from "../Utils/Api_Config";
 
@@ -10,8 +9,4 @@ export class PoliciesService {
   static UpdateSinglePolicy = async (request) => {
     return axios.patch(`${hostname}/update-user-policy`, request);
   };
-
-  //    static DeleteCmsUser = async (request: IDeleteCmsUser) => {
-  //     return ApiConfig.InstanceDelete("/cms-user/delete-cms-user", request);
-  //   };
 }
