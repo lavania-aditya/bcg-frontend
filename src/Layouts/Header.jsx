@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 
 export const Header = () => {
   return (
-    <Navbar expand="lg" className="header" >
+    <Navbar expand="lg" className="header">
       <Navbar.Brand>
         <Link to="/">ABC Insurance</Link>
       </Navbar.Brand>
@@ -14,6 +14,7 @@ export const Header = () => {
           {NavLinkItems.map((item, idx) => (
             <NavLink
               to={item.link}
+              exact={true}
               className="nav-link"
               activeClassName="active"
               key={idx}
@@ -28,6 +29,6 @@ export const Header = () => {
 };
 
 const NavLinkItems = [
-  { name: "Home", link: "/" },
+  { name: "Dashboard", link: "/" },
   { name: "All Policies", link: "/all-policies" },
 ];
