@@ -25,7 +25,7 @@ export const AllPolicies = (props) => {
       dataField: "date_of_purchase",
       text: "Purchase Date",
       formatter: (cell, row, rowIndex) =>
-        moment(row.date_of_purchase).format("MMM Do YYYY"),
+        moment(row.date_of_purchase, "MM/DD/YYYY").format("MMM Do YYYY"),
       searchable: false,
     },
     {

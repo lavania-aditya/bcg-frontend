@@ -272,7 +272,7 @@ export const EditPolicy = (props) => {
                 <Form.Control
                   disabled
                   type="text"
-                  value={moment(formData.date_of_purchase).format(
+                  value={moment(formData.date_of_purchase, "MM/DD/YYYY").format(
                     "dddd, MMMM Do YYYY"
                   )}
                 />

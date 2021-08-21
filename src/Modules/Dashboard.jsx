@@ -34,7 +34,9 @@ export const Dashboard = () => {
     let decCount = 0;
 
     for (let i = 0; i < policiesData.length; i++) {
-      let month = moment(policiesData[i].date_of_purchase).format("MMMM");
+      let month = moment(policiesData[i].date_of_purchase, "MM/DD/YYYY").format(
+        "MMMM"
+      );
 
       switch (month) {
         case "January":
@@ -177,7 +179,7 @@ export const Dashboard = () => {
         </Dropdown>
       </div>
       <div className="chart-display">
-        <Bar data={chartData}  />
+        <Bar data={chartData} />
       </div>
     </div>
   );
