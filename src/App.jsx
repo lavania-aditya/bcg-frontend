@@ -37,7 +37,8 @@ export const App = () => {
         reject();
       });
     return () => {};
-  });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[]);
 
   if (pageLoader) {
     return <PageLoader />;
