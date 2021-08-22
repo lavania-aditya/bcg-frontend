@@ -48,7 +48,7 @@ export const AllPolicies = (props) => {
       searchable: false,
     },
     {
-      dataField: "customer_income_group",
+      dataField: "customer_Income_group",
       text: "Income Group",
       searchable: false,
     },

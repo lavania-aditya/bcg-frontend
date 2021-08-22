@@ -89,7 +89,7 @@ export const EditPolicy = (props) => {
 
   const incomeGroupChange = (item) => {
     let newFormData = { ...formData };
-    newFormData.customer_income_group = item;
+    newFormData.customer_Income_group = item;
     setFormData(newFormData);
   };
 
@@ -193,7 +193,7 @@ export const EditPolicy = (props) => {
       toast.error("Invalid Customer Gender");
       return;
     }
-    if (!formData.customer_income_group) {
+    if (!formData.customer_Income_group) {
       toast.error("Invalid Customer Income Group");
       return;
     }
@@ -264,11 +264,11 @@ export const EditPolicy = (props) => {
           <Form>
             <Form.Row>
               <Form.Group as={Col} xs="12" sm="12" md="4" lg="4" xl="4">
-                <Form.Label>Policy ID</Form.Label>
+                <Form.Label>Policy ID<span className="required">*</span></Form.Label>
                 <Form.Control disabled type="text" value={formData.policy_id} />
               </Form.Group>
               <Form.Group as={Col} xs="12" sm="12" md="4" lg="4" xl="4">
-                <Form.Label>Date Of Purchase</Form.Label>
+                <Form.Label>Date Of Purchase<span className="required">*</span></Form.Label>
                 <Form.Control
                   disabled
                   type="text"
@@ -279,7 +279,7 @@ export const EditPolicy = (props) => {
               </Form.Group>
 
               <Form.Group as={Col} xs="12" sm="12" md="4" lg="4" xl="4">
-                <Form.Label>Customer ID</Form.Label>
+                <Form.Label>Customer ID<span className="required">*</span></Form.Label>
                 <Form.Control
                   disabled
                   type="text"
@@ -290,7 +290,7 @@ export const EditPolicy = (props) => {
 
             <Form.Row>
               <Form.Group as={Col} xs="12" sm="12" md="3" lg="3" xl="3">
-                <Form.Label>Policy Premium</Form.Label>
+                <Form.Label>Policy Premium<span className="required">*</span></Form.Label>
                 <InputGroup>
                   <InputGroup.Text className="no-action">$</InputGroup.Text>
                   <Form.Control
@@ -303,7 +303,7 @@ export const EditPolicy = (props) => {
               </Form.Group>
 
               <Form.Group as={Col} xs="12" sm="12" md="3" lg="3" xl="3">
-                <Form.Label>Fuel Type</Form.Label>
+                <Form.Label>Fuel Type<span className="required">*</span></Form.Label>
                 <Dropdown className="form-ddn">
                   <Dropdown.Toggle className="ddn-text">
                     {formData.fuel}
@@ -322,7 +322,7 @@ export const EditPolicy = (props) => {
               </Form.Group>
 
               <Form.Group as={Col} xs="12" sm="12" md="3" lg="3" xl="3">
-                <Form.Label>Vechile Segment</Form.Label>
+                <Form.Label>Vechile Segment<span className="required">*</span></Form.Label>
                 <Dropdown className="form-ddn">
                   <Dropdown.Toggle className="ddn-text">
                     {formData.vechile_segment}
@@ -341,7 +341,7 @@ export const EditPolicy = (props) => {
               </Form.Group>
 
               <Form.Group as={Col} xs="12" sm="12" md="3" lg="3" xl="3">
-                <Form.Label>Bodily Injury Liability</Form.Label>
+                <Form.Label>Bodily Injury Liability<span className="required">*</span></Form.Label>
                 <div className="radio-div">
                   <Form.Check
                     label="0"
@@ -363,7 +363,7 @@ export const EditPolicy = (props) => {
 
             <Form.Row>
               <Form.Group as={Col} xs="12" sm="12" md="3" lg="3" xl="3">
-                <Form.Label>Personal Injury Protection</Form.Label>
+                <Form.Label>Personal Injury Protection<span className="required">*</span></Form.Label>
                 <div className="radio-div">
                   <Form.Check
                     label="0"
@@ -382,7 +382,7 @@ export const EditPolicy = (props) => {
                 </div>
               </Form.Group>
               <Form.Group as={Col} xs="12" sm="12" md="3" lg="3" xl="3">
-                <Form.Label>Property Damage Liability</Form.Label>
+                <Form.Label>Property Damage Liability<span className="required">*</span></Form.Label>
                 <div className="radio-div">
                   <Form.Check
                     label="0"
@@ -402,7 +402,7 @@ export const EditPolicy = (props) => {
               </Form.Group>
 
               <Form.Group as={Col} xs="12" sm="12" md="3" lg="3" xl="3">
-                <Form.Label>Collision</Form.Label>
+                <Form.Label>Collision<span className="required">*</span></Form.Label>
                 <div className="radio-div">
                   <Form.Check
                     label="0"
@@ -422,7 +422,7 @@ export const EditPolicy = (props) => {
               </Form.Group>
 
               <Form.Group as={Col} xs="12" sm="12" md="3" lg="3" xl="3">
-                <Form.Label>Comprehensive</Form.Label>
+                <Form.Label>Comprehensive<span className="required">*</span></Form.Label>
                 <div className="radio-div">
                   <Form.Check
                     label="0"
@@ -444,7 +444,7 @@ export const EditPolicy = (props) => {
 
             <Form.Row>
               <Form.Group as={Col} xs="12" sm="12" md="3" lg="3" xl="3">
-                <Form.Label>Customer Marital Status</Form.Label>
+                <Form.Label>Customer Marital Status<span className="required">*</span></Form.Label>
                 <div className="radio-div">
                   <Form.Check
                     label="0"
@@ -464,7 +464,7 @@ export const EditPolicy = (props) => {
               </Form.Group>
 
               <Form.Group as={Col} xs="12" sm="12" md="3" lg="3" xl="3">
-                <Form.Label>Customer Gender</Form.Label>
+                <Form.Label>Customer Gender<span className="required">*</span></Form.Label>
                 <div className="radio-div">
                   <Form.Check
                     label="Male"
@@ -483,10 +483,10 @@ export const EditPolicy = (props) => {
                 </div>
               </Form.Group>
               <Form.Group as={Col} xs="12" sm="12" md="3" lg="3" xl="3">
-                <Form.Label>Customer Income Group</Form.Label>
+                <Form.Label>Customer Income Group<span className="required">*</span></Form.Label>
                 <Dropdown className="form-ddn">
                   <Dropdown.Toggle className="ddn-text">
-                    {formData.customer_income_group}
+                    {formData.customer_Income_group}
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
                     {incomeGroupList.map((item, idx) => (
@@ -501,7 +501,7 @@ export const EditPolicy = (props) => {
                 </Dropdown>
               </Form.Group>
               <Form.Group as={Col} xs="12" sm="12" md="3" lg="3" xl="3">
-                <Form.Label>Customer Region</Form.Label>
+                <Form.Label>Customer Region<span className="required">*</span></Form.Label>
                 <Dropdown className="form-ddn">
                   <Dropdown.Toggle className="ddn-text">
                     {formData.customer_region}
