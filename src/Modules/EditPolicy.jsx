@@ -22,10 +22,10 @@ export const EditPolicy = (props) => {
       if (/^\d+$/.test(val) === false) {
         val = val.replace(/[^\d]/g, "");
       }
-      if (val.length > 1000000) {
-        let a = val.replace(/[^\d]/g, "");
-        val = a.substring(0, val.length - 1);
-      }
+      // if (val > 1000000) {
+      //   let a = val.replace(/[^\d]/g, "");
+      //   val = a.substring(0, val.length - 1);
+      // }
     }
 
     let newFormData = { ...formData };
@@ -130,6 +130,11 @@ export const EditPolicy = (props) => {
       toast.error("Policy Premium Must be Grater than zero");
       return;
     }
+    if (formData.premium >  1000000) {
+      toast.error("Policy Premium Must Not be Grater than 1 Million.");
+      return;
+    }
+   
     if (!formData.fuel) {
       toast.error("Invalid Fuel Type");
       return;
